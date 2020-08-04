@@ -1,10 +1,10 @@
 rm(list=ls())
-setwd("/")#######################################################################################################
+setwd("/")
 source("/Functions for toy range dynamic model.R")
 source("/Toy range dynamic model.R")
-Path=("") # folder wher results canbe stored
+Path=("/") # folder wher results canbe stored
 
-speciesPool <- read.csv(file="/speciesPool.csv")###################################################################
+speciesPool <- read.csv(file="/speciesPool.csv")
 
 modelVector <- c('Beverton')
 TempCangeYear<-c(0.00, 0.02, 0.04, 0.06)
@@ -33,7 +33,7 @@ for (modelIndex in 1:length(modelVector)) {
       for(landscapeIndex in 1:length(landscapeVector)){
         
         print('EcoSimulation running')
-        result <- EcoSimulation(InputParameter = "/Test_1.csv",#######################################################
+        result <- EcoSimulation(InputParameter = "/Test_1.csv",
                                 StoragePath = Path,
                                 Experiment = T,
                                 Rep_modelName_Experiment = modelVector[modelIndex],
@@ -105,6 +105,6 @@ for (modelIndex in 1:length(modelVector)) {
 
 
 #save
-write.csv(ClimateChangeExperiment,"/ClimateChangeExperiment.csv")#############################################################
+write.csv(ClimateChangeExperiment,"/ClimateChangeExperiment.csv")
 write.csv(ClimateChangeExtinction,"/ClimateChangeExtinction.csv")
 
