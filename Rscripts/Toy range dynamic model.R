@@ -15,7 +15,7 @@ EcoSimulation<-function(
     landscapeIndex_Experiment,
     SimulationTimesteps_Experiment
   ){
-  setwd("/Users/robert.urban/Desktop/two")##############################################################
+  setwd("/")
   RunName<- gsub(".*/|\\..*","",InputParameter) #define name for plot output
   InputParameter<-read.csv(InputParameter)
   with(InputParameter,{# load Input Parameter in environment
